@@ -1,0 +1,30 @@
+**Task:** Create a Spring Boot 3 project using Java 21 with a `pom.xml` in the root directory. 
+
+### Project Structure:
+1. **Root Directory**:
+   - Include `pom.xml` for a Spring Boot 3 project setup.
+   
+2. **Java Package**: `examples.azure.containerappsalbumapi` located at `src/main/java/examples/azure/containerappsalbumapi/`
+   - **`AlbumController.java`**: A REST controller with specified endpoints.
+   - **`Album.java`**: An entity class representing an album.
+
+### Requirements:
+
+1. **`Album.java`** should have the following fields:
+   - `int id`
+   - `String title`
+   - `String artist`
+   - `double price`
+   - `String imageUrl`
+
+2. **`AlbumController.java`** should include the following endpoints:
+   - **GET `/`**: Returns an HTML string with a welcome message and a list of available endpoints.
+   - **GET `/albums`**: Accepts optional query parameters `owner` (String), `lowPrice` (Double), and `highPrice` (Double). Filters albums based on these parameters.
+   - **GET `/albums/{id}/owner`**: Returns the owner of the album with the specified ID.
+
+3. **Private Helper Methods** in `AlbumController`:
+   - `filterAlbumsByOwner(String owner, List<Album> albums)`: Filters albums by owner.
+   - `filterAlbumsByPrice(Double lowPrice, Double highPrice, List<Album> albums)`: Filters albums by price range.
+   - `loadAllAlbums()`: Loads a predefined list of albums.
+
+Ensure the repository contains the correct Java files and is structured properly as a Spring Boot project. Include a `README.md` that describes the project setup and how to run it.
