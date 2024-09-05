@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AlbumApplication<containerappsalbumapi>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "examples.azure.containerappsalbumapi.AlbumApplication",
+            "projectName": "containerappsalbumapi",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
