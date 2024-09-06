@@ -1,4 +1,21 @@
-# fordemo
+# Background
+I started my journey in software development way back in 1998, using Microsoft Access. At the time, it was revolutionary, offering a simple, procedural approach to coding. Yet, as time moved on, I realized that procedural coding, while effective, didn't evolve to meet the growing needs of modern software development.
+
+Fast forward to 2013, and I found myself diving into JBoss Forge. Here, I got more exposed to patterns and reusable code, but something was missing—it didn’t quite prepare me for the future of software development, especially as the industry was moving toward greater automation and abstraction.
+
+In 2017, my perspective changed when I encountered WindUp and OpenRewrite. These tools introduced me to AST (Abstract Syntax Trees), and I started working more with OpenJDK migrations. I realized then that software wasn’t just about writing code anymore; it was about migrating and modernizing to keep pace with the world of cloud and container-based architectures.
+
+Things took a major turn in 2021 when GitHub Copilot came into the picture. This was a game-changer, especially for greenfield projects. Developers' workflows were transforming, and it was all about the mantra to "Do it better." GitHub Copilot helped me:
+
+- Generate new projects in seconds.
+- Generate classes with simple prompts.
+- Even come up with commit messages, freeing up more time for me to focus on logic and architecture.
+
+However, not all my work was in greenfield projects. I had to deal with brownfield projects—older codebases that needed modernization. With Java Version 23 on the horizon, it was time to take a fresh look at how we migrate and modernize legacy applications, ensuring they are ready for the future.
+
+Looking ahead to 2025, we’re entering a new era with GitHub Workspaces, providing more seamless collaboration and development environments tailored to the evolving needs of teams.
+
+In essence, my journey to using VS Code Insider to rewrite with new Java syntax is one of constant evolution—learning from past technologies and tools, adopting new ones, and always striving to make coding more efficient and modern.
 
 ## Project Setup
 
