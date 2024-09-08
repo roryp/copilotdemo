@@ -1,4 +1,4 @@
-package examples.azure.containerappsalbumapi;
+package examples.azure.albumapi;
 
 public class Album {
     private int id;
