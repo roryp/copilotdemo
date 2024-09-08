@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DemoClass",
+            "request": "launch",
+            "mainClass": "examples.azure.albumapi.DemoClass",
+            "projectName": "containerappsalbumapi"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-AlbumApplication<containerappsalbumapi>",
             "request": "launch",
             "cwd": "${workspaceFolder}",

@@ -1,5 +1,6 @@
 package examples.azure.albumapi;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -19,66 +20,87 @@ public class DemoClass {
                 .collect(Collectors.toList());
         System.out.println(upperCaseNames);
 
-        // JDK 8: Repeating annotations
-        @Deprecated
-        @Deprecated
-        class DeprecatedClass {
-        }
+        // JDK 8: Diamond operator enhancements
+        ArrayList<String> list = new ArrayList<>(); // Diamond operator with anonymous class
 
-        // JDK 9: Diamond operator enhancements
-        var list = new ArrayList<>(); // Diamond operator with anonymous class
-
-        // JDK 10: var for local variables
-        var message = "Hello, var!";
+        // JDK 8: Local variables
+        String message = "Hello, var!";
         System.out.println(message);
 
-        // JDK 11: var for lambda parameters
-        var numbers = List.of(1, 2, 3, 4, 5);
-        numbers.forEach((var number) -> System.out.println(number));
+        // JDK 8: Lambda parameters
+        List<Integer> numbers = List.of(1, 2, 3, 4, 5);
+        numbers.forEach((Integer number) -> System.out.println(number));
 
-        // JDK 11: String new methods
-        var str = "  Hello, World!  ";
-        System.out.println(str.strip());
-        System.out.println("Line1\nLine2\nLine3".lines().collect(Collectors.toList()));
-        System.out.println("Hello".repeat(3));
+        // JDK 8: String new methods
+        String str = "  Hello, World!  ";
+        System.out.println(str.trim());
+        System.out.println(Stream.of("Line1", "Line2", "Line3").collect(Collectors.toList()));
+        System.out.println(new String(new char[3]).replace("\0", "Hello"));
 
-        // JDK 11: Optional.isEmpty()
-        var optional = Optional.of("Hello");
-        System.out.println(optional.isEmpty());
+        // JDK 8: Optional.isPresent()
+        Optional<String> optional = Optional.of("Hello");
+        System.out.println(!optional.isPresent());
 
-        // JDK 14: Switch expressions
-        var day = "MONDAY";
-        var result = switch (day) {
-            case "MONDAY", "FRIDAY", "SUNDAY" -> 6;
-            case "TUESDAY" -> 7;
-            case "THURSDAY", "SATURDAY" -> 8;
-            case "WEDNESDAY" -> 9;
-            default -> throw new IllegalStateException("Unexpected value: " + day);
-        };
+        // JDK 8: Switch statements
+        String day = "MONDAY";
+        int result;
+        switch (day) {
+            case "MONDAY":
+            case "FRIDAY":
+            case "SUNDAY":
+                result = 6;
+                break;
+            case "TUESDAY":
+                result = 7;
+                break;
+            case "THURSDAY":
+            case "SATURDAY":
+                result = 8;
+                break;
+            case "WEDNESDAY":
+                result = 9;
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + day);
+        }
         System.out.println(result);
 
-        // JDK 15: Text blocks
-        var textBlock = """
-                This is a text block.
-                It spans multiple lines.
-                """;
+        // JDK 8: Traditional string concatenation
+        String textBlock = "This is a text block.\n" +
+                   "It spans multiple lines.\n";
         System.out.println(textBlock);
 
-        // JDK 16: Records
-        record Point(int x, int y) {
+        // JDK 8: Traditional class instead of record
+        class Point {
+            private final int x;
+            private final int y;
+
+            public Point(int x, int y) {
+                this.x = x;
+                this.y = y;
+            }
+
+            @Override
+            public String toString() {
+                return "Point{" +
+                        "x=" + x +
+                        ", y=" + y +
+                        '}';
+            }
         }
-        var point = new Point(1, 2);
+        Point point = new Point(1, 2);
         System.out.println(point);
 
-        // JDK 16: Pattern matching for instanceof
+        // JDK 8: Traditional instanceof check and casting
         Object obj = "Hello, World!";
-        if (obj instanceof String s) {
+        if (obj instanceof String) {
+            String s = (String) obj;
             System.out.println(s.toUpperCase());
         }
 
-        // JDK 16: Stream.toList() method
-        var stream = Stream.of("a", "b", "c");
-        var listFromStream = stream.toList();
+        // JDK 8: Stream.collect(Collectors.toList())
+        Stream<String> stream = Stream.of("a", "b", "c");
+        List<String> listFromStream = stream.collect(Collectors.toList());
         System.out.println(listFromStream);
     }
 }
