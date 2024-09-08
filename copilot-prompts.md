@@ -1,8 +1,5 @@
 **Task:** Create a Spring Boot 3 project using Java 17 with a `pom.xml` in the root directory.
 
-
-
-
 ### Project Structure:
 1. **Root Directory**:
    - Include a `pom.xml` file configured for a Spring Boot 3 project setup.
@@ -10,7 +7,7 @@
    - **`AlbumApplication.java`**: The main application class to run the Spring Boot application.
    - **`AlbumController.java`**: A REST controller with specified endpoints.
    - **`Album.java`**: An entity class representing an album.
-   - **`DemoClass.java`**: a Java class demonstrating the usage of various JDK features from JDK 8 to JDK 22. 
+   - **`DemoClass.java`**: A Java class demonstrating the usage of various JDK features from JDK 8 to JDK 22.
 
 ### Requirements:
 1. **`pom.xml`** should:
@@ -39,10 +36,9 @@
    - `loadAllAlbums()`: Loads a predefined list of albums.
 
 6. **`DemoClass`** should contain:
-Examples of lambda expressions, method references, optional class, stream API, default methods in interfaces, repeating annotations, modules, private interface methods, diamond operator enhancements, `var` for local variables and lambda parameters, nest-based access control, new `String` methods, `Optional.isEmpty()`, switch expressions, text blocks, records, pattern matching for `instanceof`, `Stream.toList()`, sealed classes, UTF-8 as default charset, record patterns, pattern matching for switch, virtual threads, sequenced collections, enhanced switch, and generic main method.
+   - Examples of lambda expressions, optional class, stream API, repeating annotations, modules, private interface methods, diamond operator enhancements, `var` for local variables and lambda parameters, new `String` methods, `Optional.isEmpty()`, switch expressions, text blocks, records, pattern matching for `instanceof`, `Stream.toList()`, record patterns, pattern matching for switch, sequenced collections, enhanced switch, and generic main method.
 
 ### Additional Requirements:
 - Ensure the repository contains all the necessary Java files and is structured properly as a Spring Boot project.
 - Include a `README.md` that describes the project setup, how to build, and run the application.
-
-The AlbumController uses old java language features. add a section to the readme explaining the migration to the jdk 17 language features
+- Add a section to the `README.md` explaining the migration to the JDK 17 language features.
