@@ -54,3 +54,4 @@ dist/
 nbdist/
 .nb-gradle/
 *.class
+script.txt
